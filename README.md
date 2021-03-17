@@ -1,5 +1,7 @@
 # POKEDEX
 
+- Endpoints utilizados no projeto:  [Collection Pokedex](https://documenter.getpostman.com/view/14330700/Tz5tYFx4)
+
 Nome dos integrantes: 
 - Ricardo
 - Wesley
