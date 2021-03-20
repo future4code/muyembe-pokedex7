@@ -17,9 +17,16 @@ export const Card = styled.article`
   width: 160px;
 `
 export const PokeName = styled.p`
-text-transform:capitalize;
+  text-transform: capitalize;
 `
-export const ButtonWraper = styled.div`
-display:flex;
-flex-direction:row;
+export const ButtonWrapper = styled.div`
+  display:flex;
+  // flex-direction:row;
+
+  button {
+    width: 80px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+  }
 `
