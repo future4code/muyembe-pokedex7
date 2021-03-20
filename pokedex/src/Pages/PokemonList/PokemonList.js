@@ -13,14 +13,14 @@ const PokemonList = () => {
       <p>AQUI É A LISTA DE POKÉMONS</p>
       <button onClick={() => goToPokedex(history)}> Ir para a Pokedex </button>
       <ListWrapper>
-        {pokemons.map((creature) => {
+        {pokemons.map((pokemon) => {
             return (
-              <Card key={creature.name}>
-                <PokeName>{creature.name}</PokeName>
-                <img alt={creature.name} src={creature.sprites.front_default} />
+              <Card key={pokemon.name}>
+                <PokeName>{pokemon.name}</PokeName>
+                <img alt={pokemon.name} src={pokemon.sprites.front_default} />
                 <ButtonWraper>
                 <button>Adcionar</button>
-                <button onClick={() => goToPokemonDetails(history)}>Detalhes</button>
+                <button onClick={() => goToPokemonDetails(history, pokemon.name)}>Detalhes</button>
                 </ButtonWraper>
               </Card>
             );
