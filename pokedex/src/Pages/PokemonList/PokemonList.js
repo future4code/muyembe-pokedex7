@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import GlobalStateContext from "../../global/GlobalStateContext";
-import { goToPokedex } from '../../routes/Coordinator';
-import { ListWrapper, Card, PokeName} from './Styled';
+import { goToPokedex, goToPokemonDetails } from '../../routes/Coordinator';
+import { ListWrapper, Card, PokeName,ButtonWraper} from './Styled';
 
 const PokemonList = () => {
   const history = useHistory();
@@ -18,6 +18,10 @@ const PokemonList = () => {
               <Card key={creature.name}>
                 <PokeName>{creature.name}</PokeName>
                 <img alt={creature.name} src={creature.sprites.front_default} />
+                <ButtonWraper>
+                <button>Adcionar</button>
+                <button onClick={() => goToPokemonDetails(history)}>Detalhes</button>
+                </ButtonWraper>
               </Card>
             );
           })}

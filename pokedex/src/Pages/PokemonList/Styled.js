@@ -19,3 +19,7 @@ export const Card = styled.article`
 export const PokeName = styled.p`
 text-transform:capitalize;
 `
+export const ButtonWraper = styled.div`
+display:flex;
+flex-direction:row;
+`
