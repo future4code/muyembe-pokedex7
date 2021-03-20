@@ -16,3 +16,6 @@ export const Card = styled.article`
   margin: 8px;
   width: 160px;
 `
+export const PokeName = styled.p`
+text-transform:capitalize;
+`
