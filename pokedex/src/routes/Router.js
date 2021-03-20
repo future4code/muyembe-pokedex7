@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PageNotFound from '../Pages/PageNotFound/PageNotFound';
-import PokedexMain from '../Pages/PokedexMain/PokedexMain';
+import Pokedex from '../Pages/Pokedex/Pokedex';
 import PokemonDetails from '../Pages/PokemonDetails/PokemonDetails';
 import PokemonList from '../Pages/PokemonList/PokemonList';
 
@@ -14,7 +14,7 @@ const Router = () => {
         </Route>
 
         <Route exact path="/pokedex">
-          <PokedexMain />
+          <Pokedex />
         </Route>
 
         <Route exact path="/detalhes">

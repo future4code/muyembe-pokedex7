@@ -2,7 +2,7 @@ export const goToPokemonList = (history) => {
   history.push("/");
 };
 
-export const goToPokedexMain = (history) => {
+export const goToPokedex = (history) => {
   history.push("/pokedex");
 };
 
