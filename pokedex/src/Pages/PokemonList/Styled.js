@@ -9,7 +9,7 @@ export const ListWrapper = styled.section`
 
 export const Card = styled.article`
   align-items: center;
-  background: lightSalmon;
+  background: #3663bf;
   display: flex;
   flex-direction: column;
   height: 200px;
