@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import GlobalStateContext from "../../global/GlobalStateContext";
 import { goToPokedex, goToPokemonDetails } from '../../routes/Coordinator';
-import { ListWrapper, Card, PokeName,ButtonWraper} from './Styled';
+import { ListWrapper, Card, PokeName, ButtonWrapper } from './Styled';
 
 const PokemonList = () => {
   const history = useHistory();
@@ -18,10 +18,10 @@ const PokemonList = () => {
               <Card key={pokemon.name}>
                 <PokeName>{pokemon.name}</PokeName>
                 <img alt={pokemon.name} src={pokemon.sprites.front_default} />
-                <ButtonWraper>
-                <button>Adcionar</button>
-                <button onClick={() => goToPokemonDetails(history, pokemon.name)}>Detalhes</button>
-                </ButtonWraper>
+                <ButtonWrapper>
+                  <button>Adicionar</button>
+                  <button onClick={() => goToPokemonDetails(history, pokemon.name)}>Detalhes</button>
+                </ButtonWrapper>
               </Card>
             );
           })}
