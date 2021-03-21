@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import GlobalStateContext from '../../global/GlobalStateContext';
-import { DetailsMain, PokemonPhotos, PokemonInfoColumn, PokemonType } from './Styled';
+import {Container,DetailsMain, PokemonPhotos, PokemonInfoColumn, PokemonType } from './Styled';
 import { goToPokedex, goToPokemonList } from '../../routes/Coordinator';
 
 const PokemonDetails = () => {
@@ -18,17 +18,16 @@ const PokemonDetails = () => {
     })
     setChosenPokemon(renderChosenPokemonDetails)
   }, [name,pokemons])
-console.log(chosenPokemon.name)
   return (
-    <>
+    <Container>
       <p> AQUI É A TELA DE DETALHES DO POKEMON </p>
       <button onClick={() => goToPokemonList(history)}> Voltar para lista de Pokemons </button>
       <button onClick={() => goToPokedex(history)}> Ir para a Pokedex </button>
       <DetailsMain>
         <PokemonPhotos>
-          <img alt={chosenPokemon.name} src={chosenPokemon && chosenPokemon.sprites && chosenPokemon.sprites.front_default} />
+          <img alt={name} src={chosenPokemon && chosenPokemon.sprites && chosenPokemon.sprites.front_default} />
 
-          <img alt={chosenPokemon.name}  src={chosenPokemon && chosenPokemon.sprites && chosenPokemon.sprites.back_default} />
+          <img alt={name}  src={chosenPokemon && chosenPokemon.sprites && chosenPokemon.sprites.back_default} />
         </PokemonPhotos>
 
         <PokemonInfoColumn>
@@ -71,7 +70,7 @@ console.log(chosenPokemon.name)
               }
         </PokemonInfoColumn>
       </DetailsMain>
-    </>
+    </Container>
   );
 };
 

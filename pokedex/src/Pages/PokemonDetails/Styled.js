@@ -1,22 +1,27 @@
 import styled from 'styled-components';
 
-export const DetailsMain = styled.main`
+export const Container = styled.main`
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+
+`
+export const DetailsMain = styled.section`
   display: flex;
-  height: 32vh;
   justify-content: space-evenly;
   margin: 20vh 72px;
   text-align: center;
   text-transform: capitalize;
-`
 
+`
 export const PokemonPhotos = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content:space-between;
 
   img {
     background: #3663bf;
-    width: 8vw;
+    width: 12rem;
 
   }
 `
@@ -27,7 +32,8 @@ export const PokemonInfoColumn = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 200px;
+  width: 240px;
+  height:460px;
 `
 
 export const PokemonType = styled.div`
