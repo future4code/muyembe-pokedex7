@@ -18,7 +18,7 @@ const PokemonDetails = () => {
     })
     setChosenPokemon(renderChosenPokemonDetails)
   }, [name,pokemons])
-
+console.log(chosenPokemon.name)
   return (
     <>
       <p> AQUI É A TELA DE DETALHES DO POKEMON </p>
@@ -26,9 +26,9 @@ const PokemonDetails = () => {
       <button onClick={() => goToPokedex(history)}> Ir para a Pokedex </button>
       <DetailsMain>
         <PokemonPhotos>
-          <img src={chosenPokemon && chosenPokemon.sprites && chosenPokemon.sprites.front_default} />
+          <img alt={chosenPokemon.name} src={chosenPokemon && chosenPokemon.sprites && chosenPokemon.sprites.front_default} />
 
-          <img src={chosenPokemon && chosenPokemon.sprites && chosenPokemon.sprites.back_default} />
+          <img alt={chosenPokemon.name}  src={chosenPokemon && chosenPokemon.sprites && chosenPokemon.sprites.back_default} />
         </PokemonPhotos>
 
         <PokemonInfoColumn>
