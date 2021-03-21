@@ -5,17 +5,19 @@ import { DetailsMain, PokemonPhotos, PokemonInfoColumn, PokemonType } from './St
 import { goToPokedex, goToPokemonList } from '../../routes/Coordinator';
 
 const PokemonDetails = () => {
-  const history = useHistory();
   const { pokemons } = useContext(GlobalStateContext);
-  const { name } = useParams();
   const [chosenPokemon, setChosenPokemon] = useState({});
+  
+  const history = useHistory();
+  const { name } = useParams();
+
 
   useEffect (() => {
     const renderChosenPokemonDetails = pokemons.find((pokemon) => {
       return pokemon.name === name
     })
     setChosenPokemon(renderChosenPokemonDetails)
-  }, [])
+  }, [name,pokemons])
 
   return (
     <>
