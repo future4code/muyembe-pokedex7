@@ -33,10 +33,10 @@ const PokemonDetails = () => {
         <PokemonInfoColumn>
           <h3>Atributos</h3>
             {
-              chosenPokemon && chosenPokemon.stats && chosenPokemon.stats.map((stat) => {
+              chosenPokemon && chosenPokemon.stats && chosenPokemon.stats.map((dataStat) => {
                 return (
-                  <p key={stat.stat.name}>
-                    <strong>{stat.stat.name}</strong>: {stat.base_stat}
+                  <p key={dataStat.stat.name}>
+                    <strong>{dataStat.stat.name}</strong>: {dataStat.base_stat}
                   </p>
                 )
               })
@@ -47,10 +47,10 @@ const PokemonDetails = () => {
             <h3>Tipo(s)</h3>
             <PokemonType>
               {
-                chosenPokemon && chosenPokemon.types && chosenPokemon.types.map((type) => {
+                chosenPokemon && chosenPokemon.types && chosenPokemon.types.map((dataType) => {
                   return (
-                    <p key={type.type.name}>
-                      {type.type.name}
+                    <p key={dataType.type.name}>
+                      {dataType.type.name}
                     </p>
                   )
                 })
@@ -59,11 +59,11 @@ const PokemonDetails = () => {
           
             <h3>Principais ataques</h3>
               {
-                chosenPokemon && chosenPokemon.moves && chosenPokemon.moves.map((move, moveList) => {
+                chosenPokemon && chosenPokemon.moves && chosenPokemon.moves.map((dataMove, moveList) => {
                   return (
                     moveList < 5 &&
-                    <p key={move.move.name}>
-                      {move.move.name}
+                    <p key={dataMove.move.name}>
+                      {dataMove.move.name}
                     </p>
                   )
                 })
