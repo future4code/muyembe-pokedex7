@@ -22,7 +22,6 @@ export const PokemonPhotos = styled.section`
   img {
     background: #3663bf;
     width: 12rem;
-
   }
 `
 
@@ -33,7 +32,7 @@ export const PokemonInfoColumn = styled.section`
   flex-direction: column;
   justify-content: space-around;
   width: 240px;
-  height:460px;
+  height: 460px;
 `
 
 export const PokemonType = styled.div`
