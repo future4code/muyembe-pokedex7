@@ -10,7 +10,7 @@ const PokemonList = () => {
 
   return (
     <>
-      <p>AQUI É A LISTA DE POKÉMONS</p>
+      <p>AQUI É A LISTA DE POKÉMONS!</p>
       <button onClick={() => goToPokedex(history)}> Ir para a Pokedex </button>
       <ListWrapper>
         {pokemons.map((pokemon) => {
