@@ -7,11 +7,8 @@ import { goToPokedex, goToPokemonList } from '../../routes/Coordinator';
 const PokemonDetails = () => {
   const { pokemons } = useContext(GlobalStateContext);
   const [chosenPokemon, setChosenPokemon] = useState({});
-  
   const history = useHistory();
   const { name } = useParams();
-
-
   useEffect (() => {
     const renderChosenPokemonDetails = pokemons.find((pokemon) => {
       return pokemon.name === name
@@ -26,44 +23,40 @@ const PokemonDetails = () => {
       <DetailsMain>
         <PokemonPhotos>
           <img alt={name} src={chosenPokemon && chosenPokemon.sprites && chosenPokemon.sprites.front_default} />
-
           <img alt={name}  src={chosenPokemon && chosenPokemon.sprites && chosenPokemon.sprites.back_default} />
         </PokemonPhotos>
-
         <PokemonInfoColumn>
           <h3>Atributos</h3>
             {
-              chosenPokemon && chosenPokemon.stats && chosenPokemon.stats.map((dataStat) => {
+              chosenPokemon && chosenPokemon.stats && chosenPokemon.stats.map((stat) => {
                 return (
-                  <p key={dataStat.stat.name}>
-                    <strong>{dataStat.stat.name}</strong>: {dataStat.base_stat}
+                  <p key={stat.stat.name}>
+                    <strong>{stat.stat.name}</strong>: {stat.base_stat}
                   </p>
                 )
               })
             }
         </PokemonInfoColumn>
-        
         <PokemonInfoColumn>
             <h3>Tipo(s)</h3>
             <PokemonType>
               {
-                chosenPokemon && chosenPokemon.types && chosenPokemon.types.map((dataType) => {
+                chosenPokemon && chosenPokemon.types && chosenPokemon.types.map((type) => {
                   return (
-                    <p key={dataType.type.name}>
-                      {dataType.type.name}
+                    <p key={type.type.name}>
+                      {type.type.name}
                     </p>
                   )
                 })
               }
           </PokemonType>
-          
             <h3>Principais ataques</h3>
               {
-                chosenPokemon && chosenPokemon.moves && chosenPokemon.moves.map((dataMove, moveList) => {
+                chosenPokemon && chosenPokemon.moves && chosenPokemon.moves.map((move, moveList) => {
                   return (
                     moveList < 5 &&
-                    <p key={dataMove.move.name}>
-                      {dataMove.move.name}
+                    <p key={move.move.name}>
+                      {move.move.name}
                     </p>
                   )
                 })
@@ -73,5 +66,4 @@ const PokemonDetails = () => {
     </Container>
   );
 };
-
 export default PokemonDetails;
