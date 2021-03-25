@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
+   
     background-color: red;
     padding: 50px;
     display: flex;
