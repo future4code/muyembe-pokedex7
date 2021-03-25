@@ -12,11 +12,9 @@ const Pokedex = () => {
       
       <p> AQUI É A POKEDEX </p>
       <button onClick={() => goToPokemonList(history)}>
-
         Voltar para lista dos Pokemons
       </button>
       <button onClick={() => goToPokemonDetails(history)}>
-
         Ver detalhes do Pokemon
       </button>
     </>
