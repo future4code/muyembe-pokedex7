@@ -8,7 +8,7 @@ const GlobalState = (props) => {
 
   const pokeBaseList = () => {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon")
+      .get("https://pokeapi.co/api/v2/pokemon?limit=24&offset=0")
       .then((replication) => setPokeBase(replication.data.results))
       .catch((error) => console.log(error));
   };
@@ -22,7 +22,7 @@ const GlobalState = (props) => {
     pokeBase.forEach((creature) => {
       axios.get(creature.url).then((replication) => {
         pokemonList.push(replication.data);
-        if (pokemonList.length === 20) {
+        if (pokemonList.length === 24) {
           setPokemons(pokemonList);
         }
       });
