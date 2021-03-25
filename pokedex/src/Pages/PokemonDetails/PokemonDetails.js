@@ -3,6 +3,7 @@ import { useHistory, useParams } from 'react-router-dom';
 import GlobalStateContext from '../../global/GlobalStateContext';
 import {Container,DetailsMain, PokemonPhotos, PokemonInfoColumn, PokemonType } from './Styled';
 import { goToPokedex, goToPokemonList } from '../../routes/Coordinator';
+import Header from '../../Components/Header/Header'
 
 const PokemonDetails = () => {
   const { pokemons } = useContext(GlobalStateContext);
@@ -16,6 +17,9 @@ const PokemonDetails = () => {
     setChosenPokemon(renderChosenPokemonDetails)
   }, [name,pokemons])
   return (
+    /*<Header botaoCaminho = {() => goToPokemonList(history)} botaoTexto = {'Voltar para lista dos Pokemons'}/>
+    <Header botaoCaminho = {() => goToPokemonList(history)} botaoTexto = {'Ir para a Pokedex'}/>*/
+
     <Container>
       <p> AQUI É A TELA DE DETALHES DO POKEMON </p>
       <button onClick={() => goToPokemonList(history)}> Voltar para lista de Pokemons </button>

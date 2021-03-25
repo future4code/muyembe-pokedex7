@@ -11,3 +11,7 @@ export const HeaderContainer = styled.header`
 export const HeaderText = styled.h1`
     
 `
+
+export const BottonPages = styled.button`
+    
+`
