@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom';
 import GlobalStateContext from "../../global/GlobalStateContext";
 import { goToPokedex, goToPokemonDetails } from '../../routes/Coordinator';
 import { ListWrapper, Card, PokeName, ButtonWrapper } from './Styled';
+import Header from '../../Components/Header/Header'
+
 
 const PokemonList = () => {
   const history = useHistory();
@@ -10,8 +12,8 @@ const PokemonList = () => {
 
   return (
     <>
-      <p>AQUI É A LISTA DE POKÉMONS!</p>
-      <button onClick={() => goToPokedex(history)}> Ir para a Pokedex </button>
+      <Header botaoCaminho = {() => goToPokedex(history)} botaoTexto = {'Ir para Pokedex'}/>
+      
       <ListWrapper>
         {pokemons.map((pokemon) => {
             return (
