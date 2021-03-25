@@ -12,21 +12,42 @@ export const Card = styled.article`
   background: #3663bf;
   display: flex;
   flex-direction: column;
-  height: 200px;
+  height: 180px;
   margin: 8px;
   width: 160px;
+  border-radius:10%;
+  box-shadow: -8px 8px 13px -6px rgba(0,0,0,0.75);
+
 `
 export const PokeName = styled.p`
   text-transform: capitalize;
+  color:white;
+  font-weight:bolder;
+  letter-spacing:2px;
 `
 export const ButtonWrapper = styled.div`
+  height:55px;
   display:flex;
-  // flex-direction:row;
+  align-items:flex-end;
 
-  button {
+  button{
     width: 80px;
-    font-size: 10px;
-    display: flex;
-    justify-content: center;
-  }
+    font-size: 14px;
+    background:white;
+   }
+   button:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+       }
+      
+   
+`
+export const BotaoDetalhes = styled.button`
+   border-radius: 7px 7px 29px 0px;
+
+`
+export const BotaoAdcionar = styled.button`
+   border-radius: 7px 7px 0px 29px;
+
+
 `
