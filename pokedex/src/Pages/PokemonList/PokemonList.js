@@ -1,14 +1,17 @@
-import React, { useContext } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useContext } from "react";
+import { useHistory } from "react-router-dom";
 import GlobalStateContext from "../../global/GlobalStateContext";
-import { goToPokedex, goToPokemonDetails } from '../../routes/Coordinator';
+import { goToPokemonDetails } from "../../routes/Coordinator";
 import {
-  ListWrapper, Card, PokeName, ButtonWrapper, ButtonAdd, ButtonDetails, PokemonImage
-
-} from './Styled';
-import Header from '../../Components/Header/Header'
-
-
+  ListWrapper,
+  Card,
+  PokeName,
+  ButtonWrapper,
+  ButtonAdd,
+  ButtonDetails,
+  PokemonImage,
+} from "./Styled";
+import Header from "../../Components/Header/Header";
 
 const PokemonList = () => {
   const history = useHistory();
@@ -16,7 +19,7 @@ const PokemonList = () => {
 
   return (
     <>
-      <Header botaoCaminho={() => goToPokedex(history)} botaoTexto={'Ir para Pokedex'} />
+      <Header titlePage={"LISTA DE POKEMON"} />
 
       <ListWrapper>
         {pokemons.map((pokemon) => {
@@ -24,20 +27,23 @@ const PokemonList = () => {
             <Card key={pokemon.name}>
               <PokeName>{pokemon.name}</PokeName>
               {/* aqui */}
-              <PokemonImage alt={pokemon.name} src={pokemon.sprites.front_default} />
+              <PokemonImage
+                alt={pokemon.name}
+                src={pokemon.sprites.front_default}
+              />
               {/* <PokemonSecondImage alt={pokemon.name} src={pokemon.sprites.other.dream_world.front_default}/> */}
               <ButtonWrapper>
                 <ButtonAdd>Adicionar</ButtonAdd>
-                <ButtonDetails onClick={() => goToPokemonDetails(history, pokemon.name)}>Detalhes</ButtonDetails>
+                <ButtonDetails
+                  onClick={() => goToPokemonDetails(history, pokemon.name)}
+                >
+                  Detalhes
+                </ButtonDetails>
               </ButtonWrapper>
             </Card>
           );
         })}
-
-
-
       </ListWrapper>
-
     </>
   );
 };
