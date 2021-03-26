@@ -57,6 +57,3 @@ export const PokemonImage = styled.img`
   bottom: 100px;
   left: auto;
 `;
-// export const PokemonSecondImage =styled.img`
-// width:45px;
-// `
