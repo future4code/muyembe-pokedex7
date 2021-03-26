@@ -4,13 +4,9 @@ import GlobalStateContext from "../../global/GlobalStateContext";
 import { goToPokemonDetails } from "../../routes/Coordinator";
 import {
   ListWrapper,
-  Card,
-  PokeName,
-  ButtonWrapper,
-  ButtonAdd,
-  ButtonDetails,
-  PokemonImage,
+
 } from "./Styled";
+import PokeCard from "../../Components/CardPokemon/Card"
 import Header from "../../Components/Header/Header";
 
 const PokemonList = () => {
@@ -24,23 +20,16 @@ const PokemonList = () => {
       <ListWrapper>
         {pokemons.map((pokemon) => {
           return (
-            <Card key={pokemon.name}>
-              <PokeName>{pokemon.name}</PokeName>
-              {/* aqui */}
-              <PokemonImage
-                alt={pokemon.name}
-                src={pokemon.sprites.front_default}
-              />
-              {/* <PokemonSecondImage alt={pokemon.name} src={pokemon.sprites.other.dream_world.front_default}/> */}
-              <ButtonWrapper>
-                <ButtonAdd>Adicionar</ButtonAdd>
-                <ButtonDetails
-                  onClick={() => goToPokemonDetails(history, pokemon.name)}
-                >
-                  Detalhes
-                </ButtonDetails>
-              </ButtonWrapper>
-            </Card>
+
+            <PokeCard
+             key={pokemon.name}
+             name={pokemon.name}
+             alt={pokemon.name}
+             Image={pokemon.sprites.front_default}
+             TextButtonOne={"Adcionar"}
+             GoToPage={() => goToPokemonDetails(history, pokemon.name)}
+             TextButtonTwo={"Detalhes"}
+              />             
           );
         })}
       </ListWrapper>
