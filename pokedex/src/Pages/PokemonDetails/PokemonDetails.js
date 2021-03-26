@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import GlobalStateContext from "../../global/GlobalStateContext";
 import {
   Container,
@@ -7,13 +7,14 @@ import {
   PokemonPhotos,
   PokemonInfoColumn,
   PokemonType,
+  
 } from "./Styled";
 import { Header } from "../../Components/Header/Header";
 
 const PokemonDetails = () => {
   const { pokemons } = useContext(GlobalStateContext);
   const [chosenPokemon, setChosenPokemon] = useState({});
-  const history = useHistory();
+
   const { name } = useParams();
   useEffect(() => {
     const renderChosenPokemonDetails = pokemons.find((pokemon) => {
@@ -23,7 +24,7 @@ const PokemonDetails = () => {
   }, [name, pokemons]);
   return (
     <>
-      <Header titlePage={"DETALHES DO POKEMON"} />
+      <Header titlePage={"DETALHES"} />
 
       <Container>
         <DetailsMain>

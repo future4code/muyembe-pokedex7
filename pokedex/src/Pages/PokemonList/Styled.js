@@ -4,7 +4,7 @@ export const ListWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 100vw;
+  width: 98vw;
 `;
 
 export const Card = styled.article`
@@ -15,7 +15,7 @@ export const Card = styled.article`
   height: 180px;
   width: 160px;
   margin: 8px;
-  margin-top: 26px; //aqui
+  margin-top: 32px; //aqui
   border-radius: 10%;
   box-shadow: -8px 8px 13px -6px rgba(0, 0, 0, 0.75);
   &:hover {
