@@ -2,14 +2,18 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   background-color: red;
-  padding: 50px;
+  padding: 20px;
   display: flex;
-  height: 40px;
-  width: 89em;
+  justify-content:space-between;
+ 
+  @media(max-width:812px){
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
 `;
 
 export const HeaderText = styled.h1`
-  margin-left: 100px;
 `;
 
 export const BottonPages = styled.span`
@@ -21,3 +25,13 @@ export const BottonPages = styled.span`
     background-color: lightcoral;
   }
 `;
+
+export const BottonContainer = styled.div`
+display:flex;
+flex-direction:row;
+@media(max-width:812px){
+    flex-direction:column;
+    align-items:center;
+  }
+
+`
