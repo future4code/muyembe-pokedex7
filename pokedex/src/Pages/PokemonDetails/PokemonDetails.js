@@ -10,6 +10,7 @@ import {
   
 } from "./Styled";
 import { Header } from "../../Components/Header/Header";
+import imageText from '../../images/DETALHES.png'
 
 const PokemonDetails = () => {
   const { pokemons } = useContext(GlobalStateContext);
@@ -24,7 +25,7 @@ const PokemonDetails = () => {
   }, [name, pokemons]);
   return (
     <>
-      <Header titlePage={"DETALHES"} />
+      <Header pokeTitle={imageText} />
 
       <Container>
         <DetailsMain>
