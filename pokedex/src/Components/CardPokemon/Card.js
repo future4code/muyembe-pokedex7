@@ -19,9 +19,9 @@ const PokeCard = (props) => {
                 src={props.Image}
             />
             <ButtonWrapper>
-                <ButtonAdd>{props.TextButtonOne}</ButtonAdd>
+                <ButtonAdd  onClick={props.GoToPageOne}>{props.TextButtonOne}</ButtonAdd>
                 <ButtonDetails
-                    onClick={props.GoToPage}>
+                    onClick={props.GoToPageTwo}>
                     {props.TextButtonTwo}
                 </ButtonDetails>
             </ButtonWrapper>

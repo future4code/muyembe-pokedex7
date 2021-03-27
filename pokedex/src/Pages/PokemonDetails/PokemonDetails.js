@@ -9,8 +9,8 @@ import {
   PokemonType,
   
 } from "./Styled";
-import { Header } from "../../Components/Header/Header";
-import imageText from '../../images/DETALHES.png'
+import DETALHES from "../../images/DETALHES.png"
+import  Header  from "../../Components/Header/Header";
 
 const PokemonDetails = () => {
   const { pokemons } = useContext(GlobalStateContext);
@@ -25,7 +25,7 @@ const PokemonDetails = () => {
   }, [name, pokemons]);
   return (
     <>
-      <Header pokeTitle={imageText} />
+      <Header pokeTitle={DETALHES} />
 
       <Container>
         <DetailsMain>
