@@ -8,6 +8,7 @@ import {
 } from "./Styled";
 import PokeCard from "../../Components/CardPokemon/Card"
 import Header from "../../Components/Header/Header";
+import imageText from '../../images/LISTAPOKEMON.png'
 
 const PokemonList = () => {
   const history = useHistory();
@@ -15,7 +16,7 @@ const PokemonList = () => {
 
   return (
     <>
-      <Header titlePage={"LISTA DE POKEMON"} />
+      <Header pokeTitle={imageText}/>
 
       <ListWrapper>
         {pokemons.map((pokemon) => {

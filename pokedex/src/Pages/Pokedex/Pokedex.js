@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams,useHistory } from "react-router-dom";
 import Header from "../../Components/Header/Header";
+
 import GlobalStateContext from "../../global/GlobalStateContext";
 import { goToPokemonList } from "../../routes/Coordinator";
 
 import Card from "../../Components/CardPokemon/Card"
+
 
 const Pokedex = () => {
   const history = useHistory();
@@ -37,6 +39,7 @@ const Pokedex = () => {
         TextButtonTwo={"Remover"}
 
       />
+
     </>
   );
 };
