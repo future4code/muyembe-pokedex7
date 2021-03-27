@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useParams,useHistory } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import Header from "../../Components/Header/Header";
-
 import GlobalStateContext from "../../global/GlobalStateContext";
 import { goToPokemonList } from "../../routes/Coordinator";
-
+import titlePokedex from  '../../images/LISTAPOKEMON.png'
 import Card from "../../Components/CardPokemon/Card"
 
 
@@ -24,7 +23,7 @@ const Pokedex = () => {
 
   return (
     <>
-      <Header titlePage={"Pokedex"} />
+      <Header pokeTitle={titlePokedex} />
       <Card
       key={name}
       name={name}

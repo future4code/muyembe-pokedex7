@@ -9,7 +9,7 @@ import {
   PokemonType,
   
 } from "./Styled";
-
+import DETALHES from "../../images/DETALHES.png"
 import  Header  from "../../Components/Header/Header";
 
 const PokemonDetails = () => {
@@ -25,7 +25,7 @@ const PokemonDetails = () => {
   }, [name, pokemons]);
   return (
     <>
-      <Header pokeTitle={imageText} />
+      <Header pokeTitle={DETALHES} />
 
       <Container>
         <DetailsMain>
