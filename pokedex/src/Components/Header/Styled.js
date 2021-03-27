@@ -20,6 +20,8 @@ export const ImgText = styled.img`
 export const BottonPages = styled.span`
   padding: 20px;
   color: #ffcc03;
+  text-shadow: -1px 0 blue, 0 1px blue,1px 0 blue, 0 -1px blue;
+  font-weight:bolder;
   display: flex;
   align-items: center;
   &:hover {
