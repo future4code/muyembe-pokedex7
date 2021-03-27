@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import GlobalStateContext from "../../global/GlobalStateContext";
-import { goToPokemonDetails } from "../../routes/Coordinator";
+import { goToPokemonDetails,goToPokedex } from "../../routes/Coordinator";
 import {
   ListWrapper,
 
@@ -26,8 +26,9 @@ const PokemonList = () => {
              name={pokemon.name}
              alt={pokemon.name}
              Image={pokemon.sprites.front_default}
+             GoToPageOne={()=> goToPokedex(history, pokemon.name)}
              TextButtonOne={"Adcionar"}
-             GoToPage={() => goToPokemonDetails(history, pokemon.name)}
+             GoToPageTwo={() => goToPokemonDetails(history, pokemon.name)}
              TextButtonTwo={"Detalhes"}
               />             
           );

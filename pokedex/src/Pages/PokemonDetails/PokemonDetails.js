@@ -9,7 +9,7 @@ import {
   PokemonType,
   
 } from "./Styled";
-import { Header } from "../../Components/Header/Header";
+import  Header  from "../../Components/Header/Header";
 
 const PokemonDetails = () => {
   const { pokemons } = useContext(GlobalStateContext);
