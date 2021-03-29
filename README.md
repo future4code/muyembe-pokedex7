@@ -16,5 +16,5 @@ O que funciona:
 
 O que não funciona: 
 
-- A página Pokedex não funciona(adcionar e remover pokemons)
+- A página Pokedex não funciona(adicionar e remover pokemons)
 - A responsividade só foi feita na página inicial
