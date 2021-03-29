@@ -7,7 +7,8 @@ Nome dos integrantes:
 - Wesley
 - Adriano
 
-Link do Surge: righteous-creator.surge.sh
+Link do Surge:
+[Surge](righteous-creator.surge.sh)
 
 O que funciona:
 
