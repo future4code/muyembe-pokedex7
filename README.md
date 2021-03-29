@@ -7,12 +7,13 @@ Nome dos integrantes:
 - Wesley
 - Adriano
 
-Link do Surge: www.link.com.br
+Link do Surge: righteous-creator.surge.sh
 
 O que funciona:
-- Item 1
-- Item 2
+
+- Os requisitos básicos 
 
 O que não funciona: 
-- Item 3
-- Item 4
+
+- A página Pokedex não funciona(adcionar e remover pokemons)
+- A responsividade só foi feita na página inicial
