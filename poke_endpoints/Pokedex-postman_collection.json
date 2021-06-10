@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "d54afd02-c00b-46b8-ada1-47248cd6edfb",
+		"name": "Pokemon Labenu",
+		"description": "## Pokedex\nEndpoints utilizados para o projeto quinzenal da turma *Muyembe* da **Labenu**.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Lista Pokemon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon/",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon",
+						""
+					]
+				},
+				"description": "Este método lista por padrão 20 pokemons. \nPara alterar adicione o parâmetro ? **`?limit={quantidade}`**"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Detalhes Pokemon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon/1",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon",
+						"1"
+					]
+				},
+				"description": "`https://pokeapi.co/api/v2/pokemon/:id`\n\nEste exibe os detalhes de um pokemon específico. Se repararem o `id` do pokemon é a posição dele na lista `+1`.\nPor exemplo se usarem o método Lista Pokemon, vão ver que o bulbassaur está na posição `0` e seu `id` é `1`."
+			},
+			"response": []
+		}
+	]
+}

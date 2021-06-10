@@ -1,16 +1,21 @@
 # POKEDEX
 
-Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Endpoints utilizados no projeto:  [Collection Pokedex](https://documenter.getpostman.com/view/14330700/Tz5tYFx4)
 
-Link do Surge: www.link.com.br
+Nome dos integrantes: 
+- Ricardo
+- Wesley
+- Adriano
+
+**Link do Surge: righteous-creator.surge.sh**
 
 O que funciona:
-- Item 1
-- Item 2
+
+- Os requisitos básicos 
 
 O que não funciona: 
-- Item 3
-- Item 4
+
+- A página Pokedex não funciona(adicionar e remover pokemons)
+- A responsividade só foi feita na página inicial
+
+![pokemon](https://user-images.githubusercontent.com/60116988/117140478-d58c6100-ad83-11eb-9a0c-fe05ecd94140.png)
