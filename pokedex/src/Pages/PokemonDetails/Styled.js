@@ -34,6 +34,7 @@ flex-direction:row;
 justify-content:center;
 }
 `;
+
 export const PokemonInfoColumn = styled.section`
   align-self: center;
   background: #3663bf;
@@ -43,6 +44,7 @@ export const PokemonInfoColumn = styled.section`
   width: 240px;
   height: 460px;
 `;
+
 export const PokemonType = styled.div`
   display: flex;
   gap: 32px;

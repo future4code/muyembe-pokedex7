@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext }from "react"
 import {
     Card,
     PokeName,
@@ -7,9 +7,22 @@ import {
     ButtonDetails,
     PokemonImage,
 } from "./Styled";
+import GlobalStateContext from "../../global/GlobalStateContext";
+
 
 
 const PokeCard = (props) => {
+    const { pokemons, pokedex, setPokedex } = useContext(GlobalStateContext);
+
+    // const  adiciona =()=>{
+    //     let pokeArray = []
+    //     pokemons.forEach((pokemons.name===)=>{
+    //         pokeArray.push()
+    //     })
+    //      setPokedex(pokeArray)
+    //     console.log(pokedex)
+         
+    //    }
     return (
 
         <Card key={props.name}>
@@ -19,7 +32,7 @@ const PokeCard = (props) => {
                 src={props.Image}
             />
             <ButtonWrapper>
-                <ButtonAdd  onClick={props.GoToPageOne}>{props.TextButtonOne}</ButtonAdd>
+                <ButtonAdd >{props.TextButtonOne}</ButtonAdd>
                 <ButtonDetails
                     onClick={props.GoToPageTwo}>
                     {props.TextButtonTwo}

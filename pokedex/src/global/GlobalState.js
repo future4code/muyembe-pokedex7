@@ -5,6 +5,7 @@ import axios from "axios";
 const GlobalState = (props) => {
   const [pokemons, setPokemons] = useState([]);
   const [pokeBase, setPokeBase] = useState([]);
+  const [pokedex,setPokedex] = useState()
 
   const pokeBaseList = () => {
     axios
@@ -29,7 +30,7 @@ const GlobalState = (props) => {
     });
   }, [pokeBase]);
 
-  const dataPokemon = { pokemons, setPokemons, pokeBase, setPokeBase };
+  const dataPokemon = { pokemons, setPokemons, pokeBase, setPokeBase, pokedex, setPokedex };
 
   return (
     <GlobalStateContext.Provider value={dataPokemon}>
